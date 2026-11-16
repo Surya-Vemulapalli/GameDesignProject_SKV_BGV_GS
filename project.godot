@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="GameDesignProject_SKV_BGV_GS"
+run/main_scene="uid://dswlgva5r2o3g"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
