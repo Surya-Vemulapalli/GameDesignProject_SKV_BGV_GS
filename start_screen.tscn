@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://dswlgva5r2o3g"]
 
+[ext_resource type="AudioStream" uid="uid://bh38njisrcqfh" path="res://Pristine_Title_Screen.ogg" id="1_ncxyx"]
+[ext_resource type="Script" uid="uid://e5ewbcgcfb4x" path="res://start_button.gd" id="2_start_button"]
+
 [node name="StartScreen" type="Control" unique_id=2004830375]
 layout_mode = 3
 anchors_preset = 15
@@ -9,25 +12,38 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=600534589]
-layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 644.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.12225223, 0.12225223, 0.12225223, 1)
 
-[node name="Label" type="Label" parent="." unique_id=1477457698]
-layout_mode = 0
-offset_left = 387.0
-offset_top = 152.0
-offset_right = 767.0
-offset_bottom = 235.0
-theme_override_font_sizes/font_size = 60
-text = "[game name]"
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1789114126]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=2092661136]
-layout_mode = 0
-offset_left = 501.0
-offset_top = 360.0
-offset_right = 656.0
-offset_bottom = 410.0
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1789114127]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1477457698]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "P R I S T I N E"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2092661136]
+layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Start →"
+script = ExtResource("2_start_button")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2044671754]
+stream = ExtResource("1_ncxyx")
+volume_db = -10.0
+autoplay = true

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ck2fkwbbiiex2"]
+
+[ext_resource type="AudioStream" uid="uid://bt8nv6u2jovwj" path="res://Pristine_Overworld.ogg" id="1_k4g30"]
+
+[node name="Overworld" type="Node2D" unique_id=950411929]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1078133678]
+offset_right = 1150.0
+offset_bottom = 644.0
+color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=145928461]
+stream = ExtResource("1_k4g30")
+volume_db = -10.0
+autoplay = true
