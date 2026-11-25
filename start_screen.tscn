@@ -2,6 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://bh38njisrcqfh" path="res://Pristine_Title_Screen.ogg" id="1_ncxyx"]
 [ext_resource type="Script" uid="uid://e5ewbcgcfb4x" path="res://start_button.gd" id="2_start_button"]
+[ext_resource type="Texture2D" uid="uid://4vbr8p0e655f" path="res://switch_buttons_down.svg" id="3_afy8x"]
 
 [node name="StartScreen" type="Control" unique_id=2004830375]
 layout_mode = 3
@@ -47,3 +48,8 @@ script = ExtResource("2_start_button")
 stream = ExtResource("1_ncxyx")
 volume_db = -10.0
 autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1762690370]
+position = Vector2(496.00003, 376)
+scale = Vector2(0.56249976, 0.56250095)
+texture = ExtResource("3_afy8x")
